@@ -1,0 +1,13 @@
+{
+  "name": "Linux Network",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "dev",
+  "workspaceFolder": "/workspaces/LinuxNetwork",
+  "postCreateCommand": "sh nft-setup.sh",
+  "customizations": {
+    "extensions": [
+      "ms-vscode.git",
+      "ms-python.python"
+    ]
+  }
+}
