@@ -11,7 +11,7 @@ nft add chain inet filter output { type filter hook output priority 0 \; policy 
 
 # Allow loopback traffic
 nft add rule inet filter input iifname lo accept
-nft add rule inet filter output oifname lo accept
+nft add rule inet filter output oifname lo acceptW
 
 # Allow docker0 interface traffic
 nft add rule inet filter input iifname docker0 accept

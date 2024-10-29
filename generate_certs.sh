@@ -4,7 +4,6 @@ echo "Generating certificates"
 
 bits=2048
 days=10950
-serial=1
 server=mosquitto
 client=client
 
