@@ -1,7 +1,7 @@
 {
   "name": "Linux Network",
   "dockerComposeFile": "docker-compose.yml",
-  "service": "dev",
+  "service": "linux-network",
   "workspaceFolder": "/workspaces/LinuxNetwork",
   "postCreateCommand": "sh nft-setup.sh",
   "customizations": {
