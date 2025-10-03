@@ -51,19 +51,23 @@ ssl_context.load_verify_locations(CA_CERT)
 client.tls_set_context(ssl_context)
 
 # Connect to the broker
+
+print("Connecting to broker")
+
 try:
     client.connect(BROKER_ADDRESS, BROKER_PORT)
-    print("Connected to broker")
 except Exception as e:
     print(f"Error connecting to broker: {e}")
+    exit(1)
+
 
 # Subscribe
-print("Subscribing to topic test/topic")
+print("Subscribing to topic: test/topic")
 client.subscribe("test/topic")
 
 try:
     # Publish a test message to trigger a response
-    print("Publishing on topic test/topic")
+    print("Publishing on topic: test/topic")
     client.publish("test/topic", "Hello MQTT with mTLS again!")
 
     while True:

@@ -1,7 +1,7 @@
 services:
 
-  dev:
-    hostname: dev
+  linux-network:
+    hostname: linux-network
     build:
       context: .
       dockerfile: ./Dockerfile
